@@ -24,7 +24,6 @@ planetInfo(earthName, moons: earthMoons, orbit: earthOrbit, hasLife: earthLife)
 planetInfo(marsName, moons: marsMoons, orbit: marsOrbit, hasLife: marsLife)
 
 
-
 let earth = ("Earth", 1, 365.26, true)
 let mars = ("Mars", 2, 686.97, false)
 
@@ -43,7 +42,7 @@ func planetInfoTuple(_ planet: (String, Int, Double, Bool)) {
 planetInfoTuple(earth)
 planetInfoTuple(mars)
 
-
+// Creating a class for Planet is far more efficient than the code above.
 
 class Planet {
     var name: String
