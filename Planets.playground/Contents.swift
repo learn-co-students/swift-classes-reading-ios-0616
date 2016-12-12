@@ -8,7 +8,7 @@ let marsMoons = 2
 let marsOrbit = 686.97
 let marsLife = false
 
-func planetInfo(name: String, moons: Int, orbit: Double, hasLife: Bool) {
+func planetInfo(_ name: String, moons: Int, orbit: Double, hasLife: Bool) {
     var moonNoun = "moon"
     if moons != 1 {
         moonNoun = "moons"
@@ -24,11 +24,10 @@ planetInfo(earthName, moons: earthMoons, orbit: earthOrbit, hasLife: earthLife)
 planetInfo(marsName, moons: marsMoons, orbit: marsOrbit, hasLife: marsLife)
 
 
-
 let earth = ("Earth", 1, 365.26, true)
 let mars = ("Mars", 2, 686.97, false)
 
-func planetInfoTuple(planet: (String, Int, Double, Bool)) {
+func planetInfoTuple(_ planet: (String, Int, Double, Bool)) {
     var moonNoun = "moon"
     if planet.1 != 1 {
         moonNoun = "moons"
@@ -43,7 +42,7 @@ func planetInfoTuple(planet: (String, Int, Double, Bool)) {
 planetInfoTuple(earth)
 planetInfoTuple(mars)
 
-
+// Creating a class for Planet is far more efficient than the code above.
 
 class Planet {
     var name: String
@@ -74,7 +73,7 @@ class Planet {
 let earth2 = Planet(name: "Earth", numberOfMoons: 1, orbitalPeriod: 365.26, hasLife: true)
 let mars2 = Planet(name: "Mars", numberOfMoons: 2, orbitalPeriod: 685.97, hasLife: false)
 
-func planetInfoObject(planet: Planet) {
+func planetInfoObject(_ planet: Planet) {
     var moonNoun = "moon"
     if planet.numberOfMoons != 1 {
         moonNoun = "moons"
